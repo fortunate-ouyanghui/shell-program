@@ -82,6 +82,23 @@ var=abc
 
 
 [ -d desk -a “$var” = 'abc' ] (相当于 desk是否是目录 && var是否等于abc，只有当两个都为真时，才返回0,反之)
-
-
+```
+## if分支语句
+```C
+if语句：
+     if [判别条件];then
+          执行内容
+     elif [判别条件]
+          执行内容
+     else
+          执行内容
+     fi
+例如：
+if [ -f test.txt ];then
+     echo 'it is a file'
+elif [-d test.txt ];then
+     echo 'it is a directory'
+else
+     echo 'it is no file and dir'
+(判断test.txt是否是文件，是否是目录，执行响应内容)
 ```
