@@ -102,3 +102,18 @@ else
      echo 'it is no file and dir'
 (判断test.txt是否是文件，是否是目录，执行响应内容)
 ```
+## case分支
+```C
+#! /bin/bash
+echo '请输入你要判决的文件名：'
+read file_name
+case "$file_name" in
+testfile|file)
+     echo 'it is a file';;
+testdir|dir)
+     echo 'it is a dir';;
+*）
+     echo 'it is not dir and file';;
+esac
+     
+```
