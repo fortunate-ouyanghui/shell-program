@@ -117,3 +117,23 @@ testdir|dir)
 esac
      
 ```
+## 循环
+```C
+for循环：
+for file_name in `ls`;do
+	echo ${file_name}     这里会打印ls命令执行的结果（test test.cpp dir）
+done
+
+
+while循环：
+echo '请输入密码：'
+read mypwd
+while [ "${mypwd}" !=  "123" ];do
+     echo '密码错误,请重新输入'
+     read mypwd
+
+     if [ ${mypwd} = "break" ];then
+		break
+	fi
+done
+```
