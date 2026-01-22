@@ -153,3 +153,13 @@ echo -e "hello\n\n\n"  (会打印3个换行符)
 echo "hello"		   (会自动添加回车)
 echo -n "hello"        (不添加回车)
 ```
+## 重定向
+```C
+date > file (将date命令执行的结果以覆盖的方式放入file中)
+date >> file (将date命令执行的结果以追加的方式放入file中)
+
+0:标准输入
+1:标准输出
+2：标准出错
+rm ttt.txt > file 2 > &1 (将rm ttt.txt执行的结果放入file，如果命令出错了也把出错信息放入file中)
+```
