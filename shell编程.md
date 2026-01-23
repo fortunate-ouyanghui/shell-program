@@ -163,3 +163,33 @@ date >> file (将date命令执行的结果以追加的方式放入file中)
 2：标准出错
 rm ttt.txt > file 2 > &1 (将rm ttt.txt执行的结果放入file，如果命令出错了也把出错信息放入file中)
 ```
+## 函数
+```C
+定义：
+函数名(){
+	函数内容;
+}
+
+调用：
+函数名 参数1 参数2 参数3
+
+
+函数外：
+$0:表示命令行参数argv[0]
+$1-$N:表示命令行参数argv[1]-argv[N]
+函数内：
+$0:表示命令行参数argv[0];
+$0-$N:表示参数1-参数N
+
+例子：
+my_function(){
+	echo "$0";
+	echo "$1";
+	echo "$2";
+	return 1；#注意：return后面只能跟数字
+}
+
+my_function aa bb
+echo "函数的返回值：$?"
+
+```
