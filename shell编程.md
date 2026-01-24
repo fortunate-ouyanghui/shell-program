@@ -193,3 +193,23 @@ my_function aa bb
 echo "函数的返回值：$?"
 
 ```
+## shell调试
+```C
+sh -x ./test.sh
+使用-x调试shell文件，以后每执行一个指令都会打印出来。
+
+set -x启用调试，set +x禁用调试
+例如文件：
+#！ /bin/bash 
+
+my_func(){
+	set -x#启用调试
+	echo "$1"
+	set +x#禁用调试
+	echo "$2"
+	echo "$3"
+}
+
+my_func aa bb cc
+
+```
